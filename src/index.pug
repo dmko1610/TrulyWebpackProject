@@ -1,0 +1,54 @@
+doctype html
+html
+    head
+    meta(charset = 'utf-8')
+    title Blue Cross
+    body
+        header 
+            h1 Новая ветеринарная клиника "Синий Крест"
+            h2 типа лого 
+            input(
+                type="button"
+                name="order"
+                value="Заказать")
+
+    article.about 
+        p Первая в Самаре ветеринарная клиника "Синий Крест" поможет вашим животным жить долго и счастливо!
+        ul.history 
+            li История
+            li Интерьер 
+            li Оборудование
+
+    .animals 
+        h3 Наши отзывы
+        blockquote Очень довольны обслуживанием в этой клинике! Стерилизация прошла быстро и безболезненно
+        cite Валентина Украинцева 
+        blockquote Пришли сюда и не пожалели потраченных денег! Поразительный сервис, профессионализм врачей просто зашкаливает!
+        cite Вячеслав Жмышенко
+    .order
+        label(for="name")
+            input#name(
+                type="text"
+                value="Имя"            
+            )
+        label(for="surname")
+            input#surname(
+                type="text"
+                value="фамилия"
+            )
+        label(for="phone")
+            input#phone(
+                type="tel"                
+            )
+        label(for="comment")
+            textarea#comment Ваш комментарий
+    .footer 
+        h1 Новая ветеринарная клиника Синий Крест
+        h2 Типа второе лого  
+        h3 Контакты 
+        ul.contacts                                       
+            li VK
+            li Telegram
+            li Instagram
+        h4 Самара, 2018
+        
