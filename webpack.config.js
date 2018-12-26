@@ -38,7 +38,10 @@ const config = {
                     {
                         loader: "less-loader",
                         options: {
-                        includePaths: ["./src/less/"]
+                        includePaths: ["./src/", "./public/"],
+                        url: false
+                        // 
+                
                   }
               },
           ]
@@ -54,7 +57,7 @@ const config = {
                 }]
             },
             {
-                test: /\.(gif|png|jpe?g|svg)$/i,
+                test: /\.(gif|png|jpg|svg)$/i,
                 use: [{
                     loader: 'file-loader',
                     options: {
@@ -81,13 +84,20 @@ const config = {
         ]
     },
     plugins: [
-        new MiniCssExtractPlugin({
-            filename: '[name].css',
-            chunkFilename: '[id].css'
-        }),
+        // new MiniCssExtractPlugin({
+        //     filename: '[name].css',
+        //     chunkFilename: '[id].css'
+        // }),
         new HtmlWebpackPlugin({
             template: './src/index.pug'
+        }),
+        new ExtractTextPlugin({
+            filename: 'style.css'
         })
+        //     filename: 'style-[contenthash].css',
+        //     disable: false,
+        //     allChunks: false, // true
+        //   })
     ],
     optimization: isProduction ? {
         minimizer: [
