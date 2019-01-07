@@ -5,19 +5,24 @@ html
     title Blue Cross
     body
         .index-grid
-            header.site-header         
-                h1 Ветклиника "Синий Крест"
-                nav.site-nav
-                    a.logo
-                        //- img
-                    a(href="#") О нас
-                    a(href="#") Каталог
-                    a(href="#") Блог                    
-                    //- img.title(src=require("./images/title.jpg") alt="doggo" width="100%")
-                    input(
+            header.site-header  
+                .inner-grid-header
+                    img.title-logo(
+                        src=require("./images/cross.png") 
+                        alt="cross"
+                        width="80px"
+                        height="80px")
+                    h1.header Клиника "Синий Крест"
+                    nav.site-nav
+                        //- a.logo
+                            //- img
+                        a(href="#") О нас
+                        a(href="#") Каталог
+                        a(href="#") Блог                                            
+                    input.order(
                         type="button"
                         name="order"
-                        value="Заказать")
+                            value="Записаться")
                         
             article.about 
                 p Первая в Самаре ветеринарная клиника "Синий Крест" поможет вашим животным жить долго и счастливо!
@@ -49,16 +54,21 @@ html
                     )
                 label(for="comment")
                     textarea#comment Ваш комментарий
-            .footer 
-                h1 Ветклиника Синий Крест
-                h2 Типа второе лого  
-                h3 Контакты 
-                ul.contacts                                       
-                    a(href="#") 
-                        li VK
-                    a(href="#")    
-                        li Telegram
-                    a(href="#")
-                        li Instagram
-                h4 Самара, 2018
+            footer.site-footer 
+                .inner-grid-footer
+                    img.title-logo(
+                        src=require("./images/cross.png") 
+                        alt="cross"
+                        width="80px"
+                        height="80px")
+                    h1.header Клиника "Синий Крест"
+                    h3.contacts-text Контакты:
+                    ul.contacts                                       
+                        a(href="#") 
+                            li VK
+                        a(href="#")    
+                            li TG
+                        a(href="#")
+                            li IG
+                    h4.city-and-phone Самара, 2018 |  +7 (956) 500 43 54
         
