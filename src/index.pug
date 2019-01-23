@@ -3,72 +3,75 @@ html
     head
     meta(charset = 'utf-8')        
     title Blue Cross
-    body
-        .index-grid
-            header.site-header  
-                .inner-grid-header
-                    img.title-logo(
-                        src=require("./images/cross.png") 
-                        alt="cross"
-                        width="80px"
-                        height="80px")
-                    h1.header Клиника "Синий Крест"
-                    nav.site-nav
-                        //- a.logo
-                            //- img
-                        a(href="#") О нас
-                        a(href="#") Каталог
-                        a(href="#") Блог                                            
-                    input.order(
-                        type="button"
-                        name="order"
-                            value="Записаться")
-                        
-            article.about 
-                p Первая в Самаре ветеринарная клиника "Синий Крест" поможет вашим животным жить долго и счастливо!
-                ul.history 
-                    li История
-                    li Интерьер 
-                    li Оборудование
+    body        
+        header
+            .header-container
+                img.logo(
+                    src=require("./images/cross.png") 
+                    alt="cross"
+                    height="80px"
+                    width="80px")
+                h1.header Синий Крест
+                input#menu-checkbox(type="checkbox")
+                nav(role="navigation")
+                    label.toggle-button(for="menu-checkbox" onclick)&attributes({'data-open':"Menu"},{'data-close':"Close"})
+                    ul.main-menu
+                        li
+                            a(href="#") Домой
+                        li
+                            a(href="#") О нас
+                        li
+                            a(href="#") Услуги
+                        li
+                            a(href="#") Отзывы
 
-            .sidebar 
-                h3 Наши отзывы
-                blockquote Очень довольны обслуживанием в этой клинике! Стерилизация прошла быстро и безболезненно
-                cite Валентина Украинцева 
-                blockquote Пришли сюда и не пожалели потраченных денег! Поразительный сервис, профессионализм врачей просто зашкаливает!
-                cite Вячеслав Жмышенко
-            .order
-                label(for="name")
-                    input#name(
-                        type="text"
-                        value="Имя"            
-                    )
-                label(for="surname")
-                    input#surname(
-                        type="text"
-                        value="фамилия"
-                    )
-                label(for="phone")
-                    input#phone(
-                        type="tel"                
-                    )
-                label(for="comment")
-                    textarea#comment Ваш комментарий
-            footer.site-footer 
-                .inner-grid-footer
-                    img.title-logo(
-                        src=require("./images/cross.png") 
-                        alt="cross"
-                        width="80px"
-                        height="80px")
-                    h1.header Клиника "Синий Крест"
-                    h3.contacts-text Контакты:
-                    ul.contacts                                       
-                        a(href="#") 
-                            li VK
-                        a(href="#")    
-                            li TG
-                        a(href="#")
-                            li IG
-                    h4.city-and-phone Самара, 2018 |  +7 (956) 500 43 54
+                input.order-button(type="button" name="order" value="Записаться")
+                        
+            //- article.about 
+            //-     p Первая в Самаре ветеринарная клиника "Синий Крест" поможет вашим животным жить долго и счастливо!
+            //-     ul.history 
+            //-         li История
+            //-         li Интерьер 
+            //-         li Оборудование
+
+            //- .sidebar 
+            //-     h3 Наши отзывы
+            //-     blockquote Очень довольны обслуживанием в этой клинике! Стерилизация прошла быстро и безболезненно
+            //-     cite Валентина Украинцева 
+            //-     blockquote Пришли сюда и не пожалели потраченных денег! Поразительный сервис, профессионализм врачей просто зашкаливает!
+            //-     cite Вячеслав Жмышенко
+            //- .order
+            //-     label(for="name")
+            //-         input#name(
+            //-             type="text"
+            //-             value="Имя"            
+            //-         )
+            //-     label(for="surname")
+            //-         input#surname(
+            //-             type="text"
+            //-             value="фамилия"
+            //-         )
+            //-     label(for="phone")
+            //-         input#phone(
+            //-             type="tel"                
+            //-         )
+            //-     label(for="comment")
+            //-         textarea#comment Ваш комментарий
+            //- footer.site-footer 
+            //-     .inner-grid-footer
+            //-         img.title-logo(
+            //-             src=require("./images/cross.png") 
+            //-             alt="cross"
+            //-             width="80px"
+            //-             height="80px")
+            //-         h1.header Клиника "Синий Крест"
+            //-         h3.contacts-text Контакты:
+            //-         ul.contacts                                       
+            //-             a(href="#") 
+            //-                 li VK
+            //-             a(href="#")    
+            //-                 li TG
+            //-             a(href="#")
+            //-                 li IG
+            //-         h4.city-and-phone Самара, 2018 |  +7 (956) 500 43 54
         

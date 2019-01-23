@@ -1,166 +1,75 @@
-@green: lightgreen;
 body {
-    background:  url("../images/title.jpg") no-repeat 100%;    
-}
-//Header 
-
-.index-grid {
-    display: grid;
-    grid-gap: 20px;
-    width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    grid-template-columns: 300px 200px 200px;
-    grid-template-rows: auto 200px;
-    justify-content: space-between;
-    
-}
-.site-header,
-.site-footer {
-    grid-column-start: 1;
-    grid-column-end: 4;  
-    background: rgba(85,50,3, 0.6);    
-}
-
-.site-header {    
-    border-radius: 40px 0 0 40px;    
-}
-
-.inner-grid-header {        
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: 500px 500px 200px;
-    grid-template-rows: auto;
-    justify-content: space-between;
-    
-}
-
-.title-logo, 
-.header {
-    grid-column: 1;
-    grid-row: 1;       
-}
-
-.title-logo {
-    justify-self: flex-start;    
-}
-
-.header {
-    justify-self: flex-end;
     font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-    color: white;
+    *{
+        padding: 0;
+        margin: 0;
+    }
+}
+li {
+    list-style: none;
+    display: flex;
 }
 
-//header end
-//footer
-.site-footer {
-    border-radius: 40px 0 40px 0;    
+a {
+    text-decoration: none;
 }
 
-.inner-grid-footer {
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: 500px 500px;
-    grid-template-rows: auto auto;
+header {
+    background-color: #e3e2c5;
+    padding: 22px 0;
+}
+
+.header-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
     justify-content: space-between;
-}
 
-.contacts-text {
-    grid-column: 2;
-    grid-row: 1;
-    justify-self: flex-start;
-    align-self: center;
-    color: white;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-.contacts {
-    grid-column: 2;        
-    grid-row: 1;        
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-column-gap: 20px;
-    justify-self: center;   
-    li {
-        list-style: none;    
+    h1, 
+    nav {
+        align-self: center;
+    }
+    h1 {
+        
     }
     a {
-        text-decoration: none;
-    }     
+        color: #000;
+        font-size: 22px;   
+        padding: 15px 25px ;
+    }
+
+    a:hover {
+        background-color: #999;
         
-}
-
-.contacts {
-    a:first-child {
-        background: url("../images/vk.png") no-repeat; 
-        color: transparent;
-        padding: 15px;
-        background-size: 40px;            
-    }
-    a:nth-child(2) {
-        background: url("../images/telegram.png") no-repeat; 
-        color: transparent;
-        padding: 15px;
-        background-size: 40px; 
+        border-radius: 30px;
     }
 
-    a:last-child {
-        background: url("../images/instagram.png") no-repeat;
-        color: transparent;
-        padding: 15px;
-        background-size: 40px;
+    #menu-checkbox {
+        display: none;
     }
-} 
-
-.city-and-phone {
-    grid-column: 2;
-    grid-row: 2;
-    color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 14px;
-}
-//footer end
-.site-nav {        
-    display: grid;
-    grid-template-areas: "a  a  a";
-    align-self: center;
     
+
+    ul{
+        display: flex;
+    }
+
+    .order-button {
+        height: 50px;
+        width: 130px;
+        align-self: center;
+        background-color: transparent;
+        border: 2px solid rgb(110, 97, 97); 
+        border-radius: 30px;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 16px;
+    }
+
+    .order-button:hover {
+        color: white;
+        background-color: rgb(116, 105, 105);;
+        border: 2px solid rgb(110, 97, 97); 
+        border-radius: 30px;
+    }
 }
 
-.site-nav a {
-    grid-area: 'a';
-    justify-self: center;
-    text-decoration: none;
-    color: white;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 20px;
-}
 
-input.order {        
-    grid-column: 3;    
-    justify-self: center;
-    align-self: center;
-    border: 2px solid black;
-    border-radius: 20px;
-    padding: 10px;
-    background-color: rgba(105, 73, 30, 0.6);
-    color: white;
-}
-
-.about {
-    grid-column-start: 1;
-    grid-column-end: 3;
-}
-
-.sidebar {
-    grid-row-start: 2;
-    grid-row-end: 4;
-    grid-column-start: 3;
-    grid-column-end: 4;
-}
-
-.order {
-    grid-column-start: 1;
-    grid-column-end: 3;
-}
