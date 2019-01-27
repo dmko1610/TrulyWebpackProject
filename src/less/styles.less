@@ -1,21 +1,25 @@
-body {
-    font-family: 'Courier New', Courier, monospace;
-    *{
-        padding: 0;
-        margin: 0;
-    }
-}
-li {
-    list-style: none;
-    display: flex;
+@Verdana: Verdana, Geneva, Tahoma, sans-serif, sans-serif;
+@Courier: 'Courier New', Courier, monospace;
+@BGGrey: rgb(179, 176, 157);
+@White: #fff;
+.animated {
+    color: white;
+    background-color: rgb(116, 105, 105);;
+    border: 2px solid rgb(110, 97, 97); 
+    border-radius: 30px;
 }
 
-a {
-    text-decoration: none;
+body {
+    font-family: @Courier;
+}
+
+*{
+    padding: 0;
+    margin: 0;
 }
 
 header {
-    background-color: #e3e2c5;
+    background-color: @BGGrey;
     padding: 22px 0;
 }
 
@@ -25,22 +29,26 @@ header {
     display: flex;
     justify-content: space-between;
 
-    h1, 
+    li {
+        list-style: none;
+        display: flex;
+    }
+     
     nav {
         align-self: center;
     }
-    h1 {
-        
-    }
+
     a {
+        text-decoration: none;
         color: #000;
         font-size: 22px;   
+        font-weight: bold;
         padding: 15px 25px ;
+        margin-right: 10px;
     }
 
     a:hover {
-        background-color: #999;
-        
+        background-color: #999;        
         border-radius: 30px;
     }
 
@@ -55,21 +63,140 @@ header {
 
     .order-button {
         height: 50px;
-        width: 130px;
+        width: 200px;
         align-self: center;
         background-color: transparent;
         border: 2px solid rgb(110, 97, 97); 
         border-radius: 30px;
-        font-family: 'Courier New', Courier, monospace;
+        font-family: @Courier;
         font-size: 16px;
+        font-weight: bold;
     }
 
     .order-button:hover {
-        color: white;
-        background-color: rgb(116, 105, 105);;
-        border: 2px solid rgb(110, 97, 97); 
-        border-radius: 30px;
+        .animated;
+    }
+}
+
+.top-slide {
+    background: url("../../src/images/dog-bg.jpg") no-repeat;
+    background-size: cover;
+    padding-top: 120px;
+    padding-bottom: 250px;
+    margin-bottom: 50px;
+    .top-container {
+        width: 85%;
+        margin: 0 auto;                
+        h2 {
+            background: rgba(155, 152, 125, 0.7);
+            display: inline-block;
+            margin-bottom: 10px;
+            font-size: 70px;
+            padding: 0 13px;
+        }
+
+        :nth-child(2) {
+            margin-bottom: 10px;
+        }
+
+        p {
+            background: rgba(22, 22, 21, 0.7);
+            display: inline-block;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 1px;
+            color: @White;     
+        }
+    }
+}
+
+.about-container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    h3 {
+        font-size: 35px;        
+    }
+    p {
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .about-cards {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 45px;
+        .bottom-card {
+            background-color: rgb(75, 73, 73);
+            padding: 5px;
+            position: relative;
+            top: -30px;
+            .first-paragraph {                
+                font-size: 20px;                
+                color: @White;
+            }
+        }
     }
 }
 
 
+@media ( max-width: 420px ) {
+    .header-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;        
+        flex-wrap: wrap;        
+        
+        .logo {
+            padding: 0 180px;
+        }
+        .main-menu {
+            display: none; 
+            position: relative;
+            right: -20px;                               
+            li {                
+                padding-top: 10px;
+            }
+            a {
+                font-family: @Verdana;
+                font-size: 16px;                
+            }
+        }
+        .toggle-button {
+            margin-top: 30px;
+            display: flex;
+            cursor: pointer;
+            color: #000;    
+            padding: 10px 30px;
+            font-size: 20px;
+            font-family: @Verdana;
+            justify-content: center;
+        }
+        .toggle-button::after {
+            content: attr(data-open);            
+        }
+
+        .toggle-button:hover {            
+            .animated;
+        }
+
+        #menu-checkbox:checked + nav[role="navigation"] {
+            .main-menu{
+                display: block;
+                align-items: center;
+            }
+            .toggle-button::after {
+                content: attr(data-close);
+            }
+        } 
+        .order-button {
+            font-size: 20px;
+            font-family: @Verdana;
+            width: 100%;
+            display: block;
+            margin: 20px;
+        }
+    }
+}

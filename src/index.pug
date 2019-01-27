@@ -1,34 +1,76 @@
 doctype html
 html
     head
-    meta(charset = 'utf-8')        
+    meta(charset = 'utf-8')
     title Blue Cross
-    body        
+    body
         header
             .header-container
                 img.logo(
-                    src=require("./images/cross.png") 
+                    src=require("./images/veterinarian-hospital.png")
                     alt="cross"
-                    height="80px"
-                    width="80px")
-                h1.header Синий Крест
+                    width="64px"
+                    height="64px")                
                 input#menu-checkbox(type="checkbox")
                 nav(role="navigation")
-                    label.toggle-button(for="menu-checkbox" onclick)&attributes({'data-open':"Menu"},{'data-close':"Close"})
+                    label.toggle-button(for="menu-checkbox" onclick)&attributes({'data-open':"MENU"},{'data-close':"CLOSE"})
                     ul.main-menu
                         li
-                            a(href="#") Домой
+                            a(href="#") Main
                         li
-                            a(href="#") О нас
+                            a(href="#") About
                         li
-                            a(href="#") Услуги
+                            a(href="#") Services
                         li
-                            a(href="#") Отзывы
+                            a(href="#") Feedbacks
+                input.order-button(type="button" name="order" value="Make an appoinment")
+        main
+            section.top-slide
+                .top-container
+                    div
+                        h2 WE HELP
+                    div
+                        h2 YOUR ANIMALS
+                    div
+                        p and it will expensive
+                    div
+                        p but it will be high quality
+                    div
+                        p so your animal will really appreciate it
+                    div
+                        p and it will be happy
+            section.about
+                .about-container
+                    h3 WE TREAT ANIMALS.
+                    h3 ANY.
+                    p The first in the Samara veterinary clinic "Blue Cross" will help your animals live happily ever after!
+                    .about-cards
+                        .card
+                            .top-card
+                                img(src=require("./images/history.jpg")
+                                    alt="history"
+                                    height="250px"
+                                    width="300px")
+                            .bottom-card
+                                p.first-paragraph History of clinic
+                        .card
+                            .top-card
+                                img(src=require("./images/interior.jpg")
+                                    alt="interior"
+                                    height="250px"
+                                    width="300px")
+                            .bottom-card
+                                p.first-paragraph Interior
+                        .card
+                            .top-card
+                                img(src=require("./images/equipment.jpg")
+                                    alt="equipment"
+                                    height="250px"
+                                    width="300px")
+                            .bottom-card
+                                p.first-paragraph Equipment
 
-                input.order-button(type="button" name="order" value="Записаться")
-                        
-            //- article.about 
-            //-     p Первая в Самаре ветеринарная клиника "Синий Крест" поможет вашим животным жить долго и счастливо!
+
             //-     ul.history 
             //-         li История
             //-         li Интерьер 
