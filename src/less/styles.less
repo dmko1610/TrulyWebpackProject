@@ -141,6 +141,52 @@ header {
     }
 }
 
+.portfolio {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+
+    h4 {
+        background: rgb(71, 71, 65);
+        color: @White;
+        padding: 0 8px;
+        display: inline-block;
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    p{
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .toggles {
+        button {
+            border: none;
+            background: none;
+            color: black;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 20px 5px;   
+            font-weight: bold;         
+        }
+
+        button::after {
+            content: ' / ';
+        }
+
+        button:last-child::after {
+            content: '';
+        }
+    }
+}
+
+.posts {
+    width: 90%;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: auto auto auto;
+}
 
 @media ( max-width: 420px ) {
     .header-container {

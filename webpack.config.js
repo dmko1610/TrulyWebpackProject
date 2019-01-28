@@ -4,6 +4,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ProvidePlugin = require('webpack-provide-global-plugin');
+const webpack = require('webpack');
 
 const isDevelopment = argv.mode === 'development';
 const isProduction = !isDevelopment;
@@ -93,6 +95,10 @@ const config = {
         }),
         new ExtractTextPlugin({
             filename: 'style.css'
+        }),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery'
         })
         //     filename: 'style-[contenthash].css',
         //     disable: false,
