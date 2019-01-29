@@ -1,7 +1,11 @@
 doctype html
 html
     head
-    meta(charset = 'utf-8')
+    meta(charset = 'utf-8')    
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="stylesheet" href="/node_modules/owl.carousel/dist/assets/owl.carousel.min.css")
+    //- link(rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css")
+    //- <link rel="stylesheet" href="/node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
     title Blue Cross
     body
         header
@@ -80,31 +84,65 @@ html
                 .posts
                     div.post.treat
                         img(src=require('./images/treatment_1.jpg')
-                            alt="treatment")
+                            alt="treatment"
+                            width="300px")
                     div.post.treat
                         img(src=require('./images/treatment_2.jpg')
-                            alt="treatment")
+                            alt="treatment"
+                            width="300px")
                     div.post.hair
                         img(src=require('./images/cutting.jpg')
-                            alt="cutting")
+                            alt="cutting"
+                            width="300px")
                     div.post.nail
                         img(src=require('./images/nails_1.jpg')
-                            alt="nails")
+                            alt="nails"
+                            width="300px")
                     div.post.nail
                         img(src=require('./images/nails_2.jpg')
-                            alt="nails")
+                            alt="nails"
+                            width="300px")
                     div.post.nail
                         img(src=require('./images/nails_1.jpg')
-                            alt="nails")
+                            alt="nails"
+                            width="300px")
                     div.post.nail
                         img(src=require('./images/nails_2.jpg')
-                            alt="nails")
+                            alt="nails"
+                            width="300px")
                     div.post.hair
                         img(src=require('./images/cutting.jpg')
-                            alt="cutting")
+                            alt="cutting"
+                            width="300px")
                     div.post.treat
                         img(src=require('./images/treatment_2.jpg')
-                            alt="treatment")
+                            alt="treatment"
+                            width="300px")
+            section.brand-slider
+                h4 OUR SUPPLIERS
+                p We use quality products from proven manufacturers.
+                .owl-carousel
+                    div
+                        img(src=require('./images/aardman.png')
+                            alt="aardman")
+                    div
+                        img(src=require('./images/animal-planet.png')
+                            alt="animal-planet")
+                    div
+                        img(src=require('./images/cartoon-network.png')
+                            alt="cartoon-network")
+                    div
+                        img(src=require('./images/evernote.png')
+                            alt="evernote")
+                    div
+                        img(src=require('./images/studio-ghibli.png')
+                            alt="studio-ghibli")
+                    div
+                        img(src=require('./images/dreamworks.png')
+                            alt="dreamworks")
+                    div
+                        img(src=require('./images/aardman_star.png')
+                            alt="aardman_star")
             //- .sidebar 
             //-     h3 Наши отзывы
             //-     blockquote Очень довольны обслуживанием в этой клинике! Стерилизация прошла быстро и безболезненно
@@ -145,4 +183,6 @@ html
             //-             a(href="#")
             //-                 li IG
             //-         h4.city-and-phone Самара, 2018 |  +7 (956) 500 43 54
-        
+    block scripts
+        script(src="/node_modules/jquery/dist/jquery.js") 
+        script(src="/node_modules/owl.carousel/dist/owl.carousel.min.js")    
